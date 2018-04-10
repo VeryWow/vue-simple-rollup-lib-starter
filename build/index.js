@@ -3,14 +3,16 @@ const bundles = require('./bundles');
 const config = require('./rollup.config');
 const fs = require('fs-extra');
 
+const config = require('../config');
+
 const roll = (format, name, conf) => {
   rollup(
     config(conf.compress, conf.polyfills, conf.autoDefine)
   ).then(bundle => bundle
     .write({
       format,
-      name: 'VueSimpleSuggest',
-      file: 'dist/' + name + '.js'
+      name: conig.name,
+      file: config.output + '/' + name + '.js'
     })
   );
 }

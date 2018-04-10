@@ -4,6 +4,7 @@ const babel = require('rollup-plugin-babel');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const uglify = require('rollup-plugin-uglify');
+const config = require('../config');
 
 module.exports = exports = function(
   compress = false,
@@ -47,7 +48,7 @@ module.exports = exports = function(
   }
 
   return {
-    input: defineInWindow ? 'lib/index.auto.js' : 'lib/index.js',
+    input: defineInWindow ? config.entryWithAutoDefine : config.entry,
     plugins
   };
 }
