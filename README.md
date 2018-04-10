@@ -23,6 +23,24 @@ npm run minor # increment minor version
 npm run major # increment major version
 ```
 
+## Project directory outline
+
+```bash
+./ # Root
+ ├── build/
+ │    ├── bundles.js # A bundle config, defines polyfills and etc.
+ │    ├── rollup.config.js # Rollup config.
+ │    └── index.js
+ ├── example/
+ │    ├── src/
+ │    ├── webpack.config.js # Webpack config for the example.
+ │    └── .babelrc # Babel config for the example.
+ ├── lib/
+ │    ├── YourComponent.vue
+ │    └── index.js
+ └── config.js
+```
+
 ## Configuration
 
 ### `./config.js`
