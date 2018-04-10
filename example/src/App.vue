@@ -9,8 +9,7 @@
 
   export default {
     components: {
-      lib,
-      TestInput
+      lib
     },
     name: 'app'
   }
